@@ -1,6 +1,8 @@
 import express from "express";
 import { router } from "./routes/router";
 import { MongooseConect } from "./config/mongoose";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 async function BootStrap() {
     

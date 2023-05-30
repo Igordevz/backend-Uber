@@ -37,5 +37,5 @@ export async function Cadastrar(request: Request, response: Response){
     }
     
     const AddUser = await UserModel.create(modelUser); 
-    return response.status(201).json({ msg: "Usuário Criado." })
+    return response.status(201).json(AddUser)
 }
