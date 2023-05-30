@@ -11,7 +11,6 @@ export async function Cadastrar(request: Request, response: Response){
     if(password != confirmPassword){
         return response.status(401).json({msg: "Suas Senhas Não Conhecidem"});
     }
-
     if(name.length < 3){
         return response.status(401).json({msg: "Insira Um Nome Válido"});
     }
