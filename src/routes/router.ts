@@ -7,4 +7,4 @@ router.get("/", (req, res) =>{
     res.send("Welcome Api")
 })
 
-router.post("/cadastro", Cadastrar)
+router.post("auth/cadastro", Cadastrar)
