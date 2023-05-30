@@ -5,7 +5,8 @@ export interface Iuser extends Document{
     name: string,
     email: string,
     password: string,
-    Emailverfiqued: boolean
+    Emailverfiqued: boolean, 
+    Token: string
 
 }
 

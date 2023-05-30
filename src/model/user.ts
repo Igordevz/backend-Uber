@@ -3,9 +3,11 @@ import { Iuser } from "./user.protocolls";
 
 const UserSchema = new Schema<Iuser>({
 
-    name: {type: String},
-    email: {type: String},
-    password: {type: String},
+    name: {type: String, required: true},
+    email: {type: String, required: true},
+    password: {type: String, required: true},
+    Emailverfiqued: {type: Boolean}, 
+    Token: {type: String, required: true}
 
 })
 
