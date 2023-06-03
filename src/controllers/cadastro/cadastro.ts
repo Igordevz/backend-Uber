@@ -5,9 +5,10 @@ import { v4 as uuidv4 } from "uuid";
 import { transport } from "../../config/SendMailer";
 
 export async function Cadastrar(request: Request, response: Response) {
-  const saltHas = 10;
+
 
   const { name, email, password, confirmPassword } = request.body;
+  const saltHas = 10;
   const passwordHash = await bycript.hash(password, saltHas);
 
   const modelUser = new UserModel({
@@ -17,6 +18,7 @@ export async function Cadastrar(request: Request, response: Response) {
     Emailverfiqued: false,
     Token: uuidv4(),
     KeyAtivation: uuidv4(),
+    forgotPassword: "user without code"
   });
   if (password != confirmPassword) {
     return response.status(401).json({ msg: "Suas Senhas Não Conhecidem" });

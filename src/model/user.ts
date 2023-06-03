@@ -8,7 +8,8 @@ const UserSchema = new Schema<Iuser>({
     password: {type: String, required: true},
     Emailverfiqued: {type: Boolean, required: true}, 
     Token: {type: String, required: true},
-    KeyAtivation: {type: String, required: true}
+    KeyAtivation: {type: String, required: true},
+    forgotPassword: {type: String, require: false}
 
 })
 
