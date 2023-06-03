@@ -14,7 +14,6 @@ export default async function ValidationEmail(req: Request, res: Response) {
     return res.status(401).json({ msg: "Email Não Encontrado" });
   }
 
-
   if (user?.Emailverfiqued == true) {
     return res
       .status(401)
@@ -31,7 +30,7 @@ export default async function ValidationEmail(req: Request, res: Response) {
     return res.status(200).json({ EmailTrue });
   }
 
-  if(key != user?.KeyAtivation){
+  if (key != user?.KeyAtivation) {
     return res.status(401).json({ msg: "Chave Não Indentificada" });
   }
 
