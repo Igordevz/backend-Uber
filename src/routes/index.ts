@@ -3,7 +3,6 @@ import { Cadastrar } from "../controllers/cadastro/cadastro";
 import ValidationEmail from "../repositories/validation_email/validation";
 import Login from "../controllers/login/login";
 
-
 export const router = Router();
 
 router.get("/", (req, res) =>{
