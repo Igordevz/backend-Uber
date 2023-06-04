@@ -14,4 +14,5 @@ export default async function EmailToken(req:Request,res:Response){
         const updatUser = await  UserModel.updateMany({email}, updatekeyRecovery)
         return res.status(200).json({msg: "Senha enviada para seu email"})
     }
+
 }
