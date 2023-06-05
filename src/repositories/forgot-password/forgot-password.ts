@@ -7,5 +7,4 @@ export default async function ForgotPassword(req: Request, res: Response){
     
     const userToken = await  UserModel.findOne({})
 
-    // criar validação por email
 }

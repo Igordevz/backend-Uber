@@ -9,10 +9,10 @@ async function BootStrap() {
     const app = express();
     
     app.use(express.json());
+    app.use(router)
     
     
     await MongooseConect();
-    app.use(router)
     
     const PORT = 3000;
     app.listen(PORT, () => {

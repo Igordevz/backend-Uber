@@ -1,4 +1,6 @@
 import nodemailer from 'nodemailer'
+import * as dotenv from "dotenv";
+dotenv.config();
 
     const user = process.env.ACESS_EMAIL
     const password = process.env.ACESS_PASS
@@ -8,6 +10,6 @@ import nodemailer from 'nodemailer'
         service: 'gmail', 
         port: 465,
         secure: true,
-        auth: {user: "igortza.98483@gmail.com", pass: "rpwudebayqysebxc" },
+        auth: {user: user, pass: password},
     })
     
