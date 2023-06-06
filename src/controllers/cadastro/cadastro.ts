@@ -152,7 +152,7 @@ export async function Cadastrar(request: Request, response: Response) {
                                                                                       </tr>
                                                                                       <tr>
                                                                                           <td align="left" class="esd-block-text es-p30b es-p30r es-p30l">
-                                                                                              <p><strong>Hi Igor Mateus,</strong></p>
+                                                                                              <p><strong>Hi ${AddUser?.name},</strong></p>
                                                                                               <p><br></p>
                                                                                               <p>Obrigado Pelo Seu Cadastro</p>
                                                                                               <p>uber...</p>
