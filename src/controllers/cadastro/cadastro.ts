@@ -32,7 +32,8 @@ export async function Cadastrar(request: Request, response: Response) {
   if (password.length < 5) {
     return response
       .status(401)
-      .json({ msg: "Sua Senha Deve Conter 5 dígitos" });
+      .json({ msg: "Sua Senha Deve Conter No Mínimo 5 dígitos" });
+
   }
 
   const UserExit = await UserModel.findOne({ email: email });
