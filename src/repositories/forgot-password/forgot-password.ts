@@ -1,10 +1,14 @@
 import { Request, Response } from "express";
 import { UserModel } from "../../model/user";
+import bycript from "bcrypt"
 
 export default async function ForgotPassword(req: Request, res: Response){
 
     const { tokenvalidation, newpassword, confirmNewPassword } = req.body
 
+    const saltHas = 10;
+    
+    const passwordHash = await bycript.hash(newpassword, saltHas);
     if(tokenvalidation.length < 1){
         return res.status(401).json({ msg: "Insira Um Token Válido" })
     }
@@ -21,10 +25,10 @@ export default async function ForgotPassword(req: Request, res: Response){
 
     const updatPassword = {
         forgotPassword: "",
-        password: newpassword
+        password: passwordHash
     }
 
-    const userToken = await  UserModel.findOne({forgotPassword: tokenvalidation}, updatPassword)
+    const userToken = await  UserModel.updateOne({forgotPassword: tokenvalidation}, updatPassword)
 
     return res.status(200).json({ msg: "Senha Alterada Com Sucesso"})
 }

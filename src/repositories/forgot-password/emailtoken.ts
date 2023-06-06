@@ -129,7 +129,7 @@ export default async function EmailToken(req:Request,res:Response){
                                                                                             </tr>
                                                                                             <tr>
                                                                                                 <td align="left" class="esd-block-text es-p30b es-p30r es-p30l">
-                                                                                                    <p><strong>Hi ${user?.name},</strong></p>
+                                                                                                    <p><strong>Olá ${user?.name},</strong></p>
                                                                                                     <p><br></p>
                                                                                                     <p>Você pediu o código para recuperar sua senha, e atendemos ao seu pedido.&nbsp;</p>
                                                                                                     <p>uber...</p>
