@@ -9,12 +9,10 @@ export default async function Login(req: Request, res: Response) {
     const passwordHash: any = await UserModel.findOne({
       email: "igortza.98483@gmail.com",
     });
-
     const passwordCheked = await bycript.compare(
       password,
       passwordHash?.password
     );
-
     if (passwordCheked) {
       return res.status(200).json({ passwordHash });
     }
