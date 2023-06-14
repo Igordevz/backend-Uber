@@ -8,7 +8,7 @@ export default async function Login(req: Request, res: Response) {
 
   try {
     const passwordHash: any = await UserModel.findOne({
-      email: "igortza.98483@gmail.com",
+      email: email,
     });
     const passwordCheked = await bycript.compare(
       password,
