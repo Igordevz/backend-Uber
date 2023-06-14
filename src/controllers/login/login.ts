@@ -3,6 +3,7 @@ import { UserModel } from "../../model/user";
 
 import bycript from "bcrypt";
 export default async function Login(req: Request, res: Response) {
+  
   const { email, password } = req.body;
 
   try {
