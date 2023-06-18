@@ -15,7 +15,7 @@ export default async function Login(req: Request, res: Response) {
       passwordHash?.password
     );
     if (passwordCheked) {
-      return res.status(200).json({ passwordHash });
+      return res.status(200).json(passwordHash);
     }
     if (!passwordCheked) {
       return res.status(401).json({ msg: "Email Ou Senhas Não Conhecidem" });
